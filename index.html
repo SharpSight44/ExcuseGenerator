@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Truly Random Excuse</title>
+    <style>
+
+h3 { margin-left: 38%; margin-top: 12%; font-size: 30px;}
+p {margin-left: 38%; font-size: 25px;}
+#genMore { margin-left: 46%; background-color: aqua;}
+    </style>
+</head>
+<body>
+  <div class="top">
+<h3> OMG you better believe this but....</h3>
+  <br>
+    <div class="sentance"><p id="excuse">Dog Ate my Homework!!</p></div>
+    <div class="click"> <button id="genMore"> Click For More </button></div>
+</div>
+    <script>
+
+
+document.querySelector('#genMore').addEventListener("click", () => {
+document.querySelector('#excuse').innerHTML = newEx();
+
+});
+
+
+
+
+
+
+
+ function newEx(){
+
+   let who = ['My dog', 'My girlfriend', 'A stranger', 'Kevin Durant'];
+   let action = ['stole', 'hid', 'ran off with', 'traded'];
+   let what = ['my keys', 'my wallet', 'my shoes', 'my phone'];
+   let when = ['at 6 am this morning', 'late last night', 'an hour ago', '30 seconds ago'];
+
+let whoNum = Math.floor(Math.random() * 4);
+let actNum = Math.floor(Math.random() * 4);
+let atNum = Math.floor(Math.random() * 4);
+let enNum = Math.floor(Math.random() * 4);
+
+  return who[whoNum] + ' ' + action[actNum] + ' ' + what[atNum] + ' ' + when[enNum];
+ }
+
+ newEx();
+
+    </script>
+</body>
+</html>
